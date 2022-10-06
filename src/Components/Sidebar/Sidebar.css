@@ -1,0 +1,72 @@
+.email a {
+  margin: 20px auto;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: var(--fz-lg);
+  letter-spacing: 0.1em;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  transition: var(--transition);
+}
+.email a:hover {
+  transform: translateY(-5px);
+  color: var(--green);
+}
+.mailcon::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--light-slate);
+}
+
+.email {
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+.social-icons::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 120px;
+  margin: 0px auto;
+  background-color: var(--light-slate);
+}
+.social-icons a {
+  color: var(--light-slate);
+  font-size: 20px;
+  padding: 5px;
+  transition: var(--transition);
+}
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: var(--green);
+}
+
+.social {
+  position: fixed;
+  bottom: 0;
+  left: 30px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}

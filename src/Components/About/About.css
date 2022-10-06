@@ -1,0 +1,134 @@
+.about-main {
+  padding: 0 160px;
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+.numbered-heading {
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  white-space: nowrap;
+  color: var(--lightest-slate);
+  line-height: 1.1;
+  font-size: 32px;
+  font-weight: 500;
+}
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+.numbered-heading .highlight {
+  font-family: var(--font-mono);
+  font-weight: 200 !important;
+}
+
+.aboutInner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+.imgAbout img {
+  border-radius: 3px;
+}
+.imgAbout {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+.imgAbout::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 2px solid var(--green);
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}
+.imgAbout:hover::after {
+  top: 12px;
+  left: 12px;
+  transition: var(--transition);
+}
+.aboutText {
+  letter-spacing: 1px;
+}
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0px 10px;
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
+}
+.skills-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.skills-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 12px;
+}
+.numbered-heading .highlight {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-main {
+    padding: 0 70px;
+    margin-top: 60px;
+  }
+  .numbered-heading {
+    font-size: 24px;
+  }
+  .numbered-heading::after {
+    width: 150px;
+  }
+  .aboutInner {
+    display: block;
+  }
+  .aboutImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .about-main {
+    padding: 0 20px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+  }
+  .numbered-heading {
+    font-size: 20px;
+  }
+
+  .numbered-heading::after {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+.bottomNav {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  width: 100vw;
+  height: 60px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(1px);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.795);
+}
+/* .btmLinks{
+    width: 95vw;
+} */
+
+.btmLinks ul {
+  width: 90vw;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+}
+.btmLinks ul a {
+  color: var(--white);
+}
+
+@media screen and (max-width: 767px) {
+  .bottomNav {
+    display: flex;
+  }
+}
